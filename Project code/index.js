@@ -9,7 +9,8 @@ btn2.addEventListener('click', () => {
   img.src = 'images/0.jpeg';
 })
 
+let form = document.querySelector("#create-task-form")
+
 document.addEventListener("DOMContentLoaded", () => {
-    let form = document.querySelector("#create-task-form")
     form.addEventListener("submit", newTask)
   });
