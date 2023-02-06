@@ -28,6 +28,11 @@ body {
 
 .like-glyph {
   cursor: pointer;
+  color: teal;
+}
+
+.like {
+  color: teal;
 }
 
 .activated-heart {

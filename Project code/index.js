@@ -1,4 +1,4 @@
-let img = document.querySelector('img')
+let img = document.querySelector('#img')
 let btn1 = document.querySelector('#btn1');
 let btn2 = document.querySelector('#btn2');
 
@@ -38,14 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
               hearts.target.innerText = EMPTY_HEART
           }
         })
-        .catch(() => {
-          const errorMess = document.getElementById("modal")
-          console.log(errorMess)
-          errorMess.className = "show"
-
-          setTimeout(() => {
-            const errorMess = document.getElementByID("modal")
-            console.log(errorMess)
-            errorMess.className = "hidden"}, 3000)}
-        )}
-        })
+      }}
+    )
