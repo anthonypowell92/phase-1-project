@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../learn-co-curriculum-phase-1-javascript-project-mode"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Project code"
+	}
+}

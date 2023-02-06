@@ -12,5 +12,6 @@ btn2.addEventListener('click', () => {
 let form = document.querySelector("#create-task-form")
 
 document.addEventListener("DOMContentLoaded", () => {
-    form.addEventListener("submit", newTask)
+    form.addEventListener("submit", newTask);
   });
+
