@@ -26,3 +26,10 @@ body {
 
 }
 
+.like-glyph {
+  cursor: pointer;
+}
+
+.activated-heart {
+  color: red;
+}
