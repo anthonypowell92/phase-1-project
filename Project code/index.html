@@ -6,41 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cocktail Menu</title>
   <link rel="stylesheet" href="style.css"></link>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <h1> Cocktail Menu</h1>
   <div class="searchBar">
     <a class="active">Find your cocktail</a>
-    <input type="search" id="search">
+    <input type="search" id="search" data-search>
     <button class="searchButton">Search</button>
   </div>
-  <div class="cocktails">
-    <div class="card"></div>
-    <div class="header">Name of cocktail</div>
-    <div class="body">Ingredients of cocktail</div>
+  <div class="cocktails" data-user-cards-container></div>
+<template data-user-template>
+    <div class="card">
+    <div class="header" data-header></div>
+    <div class="body" data-body></div>
   </div>
-  <div class="cocktails">
-    <div class="card"></div>
-    <div class="header">Name of cocktail</div>
-    <div class="body">Ingredients of cocktail</div>
-  </div>
-  <div class="cocktails">
-    <div class="card"></div>
-    <div class="header">Name of cocktail</div>
-    <div class="body">Ingredients of cocktail</div>
-  </div>
-  <div class="cocktails">
-    <div class="card"></div>
-    <div class="header">Name of cocktail</div>
-    <div class="body">Ingredients of cocktail</div>
-  </div>
-  <div class="cocktails">
-    <div class="card"></div>
-    <div class="header">Name of cocktail</div>
-    <div class="body">Ingredients of cocktail</div>
-  </div>
-
-
-  <script src="script.js" defer></script>
+</template>
 </body>
 </html>
