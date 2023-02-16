@@ -1,29 +1,29 @@
-const userCardTemplate = document.querySelector("[data-user-template]")
-const userCardContainer = document.querySelector("[data-user-cards-container]")
+const drinkCardTemplate = document.querySelector("[data-user-template]")
+const drinkCardContainer = document.querySelector("[data-user-cards-container]")
 const searchInput = document.querySelector("[data-search]")
 
-let users = []
+
+let drinks = []
 
 searchInput.addEventListener("input", e => {
   const value = e.target.value.toLowerCase()
-  users.forEach(user => {
+  drinks.forEach(drink => {
     const isVisible =
-     user.strDrink.toLowerCase().includes(value) ||
-     user.strCategory.toLowerCase().includes(value)
-  user.element.classList.toggle("hide", !isVisible)
+     drink.strDrink.toLowerCase().includes(value) ||     drink.strCategory.toLowerCase().includes(value)
+  drink.element.classList.toggle("hide", !isVisible)
   })
 })
-
-fetch('http://localhost:3000/drinks')
+const test= "martini"
+fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${test}`)
   .then(res => res.json())
   .then(data => {
-   users = data.map(user => {
-      const card = userCardTemplate.content.cloneNode(true).children[0]
+   drinks = data['drinks'].map(drink => {
+      const card = drinkCardTemplate.content.cloneNode(true).children[0]
       const header = card.querySelector("[data-header]")
       const body = card.querySelector("[data-header]")
-      header.textContent = user.strDrink
-      body.textContent = user.strCategory
-      userCardContainer.append(card)
-      return {name: user.strDrink, category: user.strCategory, element: card}
+      header.textContent = drink.strDrink
+      body.textContent = drink.strCategory
+      drinkCardContainer.append(card)
+      return {name: drink.strDrink, category: drink.strCategory, element: card}
   })
 })
