@@ -33,7 +33,8 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${selection}`)
       body4.textContent = drink.strGlass
       drinkCardContainer.append(card)
       console.log(card)
-      return {name: drink.strDrink, category: drink.strCategory, IBA: drink.strIBA, Alcoholic: drink.strAlcoholic, Glass: drink.strGlass, element: card}
+      return {name: drink.strDrink, category: drink.strCategory,
+      IBA: drink.strIBA, Alcoholic: drink.strAlcoholic, Glass: drink.strGlass, element: card}
   })
 })
 
@@ -42,7 +43,7 @@ document.getElementById("title").addEventListener("mouseover", mouseOver);
 document.getElementById("title").addEventListener("mouseout", mouseOut);
 
 function mouseOver() {
-  document.getElementById("title").style.color = "red";
+  document.getElementById("title").style.color = "lightblue";
 }
 
 function mouseOut() {
@@ -52,5 +53,5 @@ function mouseOut() {
 document.getElementById("search").addEventListener("focus", myFunction);
 
 function myFunction() {
-  document.getElementById("search").style.backgroundColor = "red";
+  document.getElementById("search").style.backgroundColor = "lightblue";
 }
