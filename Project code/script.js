@@ -30,3 +30,15 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${selection}`)
       return {name: drink.strDrink, category: drink.strCategory, element: card}
   })
 })
+
+
+document.getElementById("title").onmouseover = function() {mouseOver()};
+document.getElementById("title").onmouseout = function() {mouseOut()};
+
+function mouseOver() {
+  document.getElementById("title").style.color = "red";
+}
+
+function mouseOut() {
+  document.getElementById("title").style.color = "black";
+}
