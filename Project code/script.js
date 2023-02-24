@@ -33,7 +33,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${selection}`)
       body4.textContent = drink.strGlass
       drinkCardContainer.append(card)
       console.log(card)
-      return {name: drink.strDrink, category: drink.strCategory,
+   return {name: drink.strDrink, category: drink.strCategory,
       IBA: drink.strIBA, Alcoholic: drink.strAlcoholic, Glass: drink.strGlass, element: card}
   })
 })
