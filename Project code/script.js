@@ -5,6 +5,7 @@ const searchB = document.querySelector("searchButton")
 
 let drinks = []
 
+//filter event listener, filters through names of cocktails/cards when typing into searchbar
 searchInput.addEventListener("input", e => {
   const value = e.target.value.toLowerCase()
      drinks.forEach(drink => {
@@ -42,6 +43,8 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${selection}`)
 document.getElementById("title").addEventListener("mouseover", mouseOver);
 document.getElementById("title").addEventListener("mouseout", mouseOut);
 
+
+//mouse over event, makes header turn to blue when hovered over to match background color
 function mouseOver() {
   document.getElementById("title").style.color = "lightblue";
 }
@@ -50,6 +53,7 @@ function mouseOut() {
   document.getElementById("title").style.color = "black";
 }
 
+//focus event, turns search bar blue to match background when clicked into
 document.getElementById("search").addEventListener("focus", myFunction);
 
 function myFunction() {
